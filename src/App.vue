@@ -5,7 +5,8 @@
   <span class="close">X</span>
 </span>
 
-<input type="text" @keydown.enter="tags.push($event.target.value)">
+<input type="text" @keydown.enter="addTag">
+<div class="error" v-if="error">Bu etiket dah önceden eklenmis!!</div>
   </div>
 </template>
 <script>
@@ -13,6 +14,19 @@ export default {
   data(){
     return{
       tags:["Vue","jquery"],
+      error:false,
+    }
+  },
+  methods:{
+    addTag(event){
+      if(event.target.length>0)
+      {
+
+      }
+
+
+      this.tags.push(event.target.value)
+      event.target.value=""
     }
   }
 }
@@ -45,5 +59,11 @@ input{
   font-size: 12px;
   cursor: pointer;
   font-weight: bold;
+}
+.error
+{
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
 }
 </style>
