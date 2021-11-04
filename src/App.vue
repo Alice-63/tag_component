@@ -19,14 +19,15 @@ export default {
   },
   methods:{
     addTag(event){
-      if(event.target.length>0)
+      let text=event.target.value;
+      if(text.length>0)
       {
-
+         
       }
 
-
-      this.tags.push(event.target.value)
-      event.target.value=""
+        this.tags.push(text)
+          text=""
+     
     }
   }
 }
