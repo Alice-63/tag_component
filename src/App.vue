@@ -20,13 +20,33 @@ export default {
   methods:{
     addTag(event){
       let text=event.target.value;
+      let matchedTag=false
       if(text.length>0)
       {
-         
+         this.tags.forEach(tag=>{
+           if(tag.toLowerCase()===text.toLowerCase())
+           {
+            matchedTag=true;
+           }
+      
+         })
+
+         if(!matchedTag)
+         {
+           this.tags.push(text);
+           text=""
+         }
+         else{
+           this.error=true;
+           setTimeout(()=>{
+             this.error=false;
+           },2000)
+         }
+
+
       }
 
-        this.tags.push(text)
-          text=""
+      
      
     }
   }
