@@ -11,8 +11,11 @@ type="text"
   </div>
 </template>
 <script>
+import Tag from "./Tag.vue"
 export default {
-    
+    components:{
+        Tag
+    }
 }
 </script>
 <style scoped>
