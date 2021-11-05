@@ -1,6 +1,9 @@
 <template>
      <div class="tag-container">
-         <Tag/>
+         <Tag v-for="(tag,index) in Tags" :key="tag"
+         :tag="tag"
+         :index="index"
+         />
 
 <input 
 type="text" 
