@@ -20,4 +20,21 @@ export default {
 </script>
 <style scoped>
 
+.tag-container
+{
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+input{
+  outline: none;
+  height: 30px;
+  width: 100px;
+}
+
+.error
+{
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
+}
 </style>
