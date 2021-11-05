@@ -19,7 +19,7 @@ export default {
      data(){
     return{
     tags:[],
-      error:false,
+    error:false,
     }
   },
   props:{
@@ -31,7 +31,7 @@ export default {
       if(this.value){
           if(this.value.length>0)
           {
-              this.tags=this.value.split(",");
+              this.tags.push(this.value.split(","));
           }
       }
   },

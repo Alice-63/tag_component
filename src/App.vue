@@ -1,6 +1,6 @@
 <template>
  <div class="container">
-<app-tags v-model="tags"></app-tags>
+<app-tags v-model="tags" ></app-tags>
 
  </div>
 </template>
@@ -12,7 +12,7 @@ export default {
  },
  data(){
    return{
-     tags:"Vue,jquery"
+     tags:"Vue,jquery,Ali"
    }
  }
 }
