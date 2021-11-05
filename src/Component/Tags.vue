@@ -18,9 +18,22 @@ import Tag from "./Tag.vue"
 export default {
      data(){
     return{
-      tags:["Vue","jquery"],
+    tags:[],
       error:false,
     }
+  },
+  props:{
+      value:{
+          required:false,
+      }
+  },
+  created(){
+      if(this.value){
+          if(this.value.length>0)
+          {
+              this.tags=this.value.split(",");
+          }
+      }
   },
 
     components:{
