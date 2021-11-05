@@ -1,9 +1,6 @@
 <template>
   <div class="tag-container">
-<span class="tag" v-for="(tag,index) in tags" :key="tag">
-  <span class="content">{{tag}}</span>
-  <span class="close" @click="removeOneTag(index)">X</span>
-</span>
+
 
 <input 
 type="text" 
@@ -66,7 +63,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style >
 body{
   font-family:sans-serif;
 }
@@ -80,21 +77,7 @@ input{
   height: 30px;
   width: 100px;
 }
-.tag
-{
-  background-color: #fbbd08;
-  padding: 10px;
-  color: #000;
-  cursor:default;
-  font-size: 14px;
-  margin-right: 5px;
-}
-.tag .close
-{
-  font-size: 12px;
-  cursor: pointer;
-  font-weight: bold;
-}
+
 .error
 {
   font-size: 12px;
