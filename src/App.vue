@@ -1,6 +1,6 @@
 <template>
  <div class="container">
-<app-tags></app-tags>
+<app-tags v-model="tags"></app-tags>
 
  </div>
 </template>
@@ -9,6 +9,11 @@ import Tags from "./Component/Tags.vue"
 export default {
  components:{
    appTags:Tags
+ },
+ data(){
+   return{
+     tags:"Vue,jquery"
+   }
  }
 }
 </script>
