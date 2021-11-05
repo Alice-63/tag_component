@@ -11,7 +11,9 @@
     @keydown.backspace="removeTag"
     >
 <div class="error" v-if="error">Bu etiket dah önceden eklenmis!!</div>
+ 
   </div>
+ 
 </template>
 <script>
 import Tag from "./Tag.vue"
@@ -31,7 +33,7 @@ export default {
       if(this.value){
           if(this.value.length>0)
           {
-              this.tags.push(this.value.split(","));
+              this.tags=this.value.split(",");
           }
       }
   },
@@ -56,6 +58,7 @@ export default {
          if(!matchedTag)
          {
            this.tags.push(text.value);
+             
            text.value=""
          }
          else{
@@ -81,6 +84,11 @@ export default {
       removeOneTag(index){
       this.tags.splice(index,1)
     }
+    },
+    watch:{
+        tags(){
+            this.$emit("input",this.tags.join(","))
+        }
     }
 }
 </script>
