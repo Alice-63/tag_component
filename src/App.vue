@@ -1,20 +1,15 @@
 <template>
  <div class="container">
+<app-tags></app-tags>
 
  </div>
 </template>
 <script>
+import Tags from "./Component/Tags.vue"
 export default {
-  data(){
-    return{
-      tags:["Vue","jquery"],
-      error:false,
-    }
-  },
-  methods:{
-  
-  
-  }
+ components:{
+   appTags:Tags
+ }
 }
 </script>
 <style >

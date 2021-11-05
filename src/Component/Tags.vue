@@ -1,21 +1,28 @@
 <template>
-     <div class="tag-container">
-         <Tag v-for="(tag,index) in Tags" :key="tag"
+<div class="tag-container">
+         <Tag   v-for="(tag,index) in tags" :key="tag"
          :tag="tag"
          :index="index"
-         />
+         @removeTagEvent="removeOneTag ($event)" />
 
-<input 
-type="text" 
-@keydown.enter="addTag"
-@keydown.backspace="removeTag"
->
+    <input 
+    type="text" 
+    @keydown.enter="addTag"
+    @keydown.backspace="removeTag"
+    >
 <div class="error" v-if="error">Bu etiket dah önceden eklenmis!!</div>
   </div>
 </template>
 <script>
 import Tag from "./Tag.vue"
 export default {
+     data(){
+    return{
+      tags:["Vue","jquery"],
+      error:false,
+    }
+  },
+
     components:{
         Tag
     },

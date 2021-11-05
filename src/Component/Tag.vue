@@ -1,14 +1,16 @@
 <template>
-  <div>
-        <span class="tag" v-for="(tag,index) in tags" :key="tag">
+  
+        <span class="tag">
         <span class="content">{{tag}}</span>
-        <span class="close" @click="removeOneTag(index)">X</span>
+        <span class="close" @click="$emit('removeTagEvent',index)">X</span>
     </span>
-  </div>
+  
 </template>
 <script>
+
+
 export default {
-    
+    props:["tag","index"]
 }
 </script>
 <style scoped>
