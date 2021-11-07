@@ -49,10 +49,10 @@ export default {
 {
 
   padding: 10px;
-
   cursor:default;
   font-size: 14px;
   margin-right: 5px;
+  border-radius: 5px;
 }
 .tag .close
 {
