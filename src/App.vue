@@ -5,6 +5,10 @@
 <hr>
 <app-tags v-model="tags2"  ></app-tags>
 {{tags2}}
+<hr>
+<app-tags v-model="tags"  ></app-tags>
+{{tags}}
+
  </div>
 </template>
 <script>
