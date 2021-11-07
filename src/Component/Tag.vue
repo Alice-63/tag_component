@@ -27,6 +27,21 @@ export default {
   background-color: #cce5ff;
   border-color: #b8daff;
 }
+.secondary{
+  color: #383d41;
+  background-color: #e2e3e5;
+  border-color: #d6d8db;
+}
+.info{
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+.warning{
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
 
 
 
