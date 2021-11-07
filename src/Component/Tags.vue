@@ -3,7 +3,7 @@
          <Tag   v-for="(tag,index) in tags" :key="tag"
          :tag="tag"
          :index="index"
-         tagColor="color"
+         :tagColor="color"
          @removeTagEvent="removeOneTag ($event)" />
 
     <input 

@@ -17,7 +17,7 @@ export default {
       }
     },
     created(){
-      this.selectedTheme=tagColor
+      this.selectedTheme=this.tagColor
     }
 }
 </script>
