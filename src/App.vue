@@ -1,6 +1,6 @@
 <template>
  <div class="container">
-<app-tags v-model="tags"  ></app-tags>
+<app-tags v-model="tags" class="primary" ></app-tags>
 {{tags}}
 <hr>
 <app-tags v-model="tags2"  ></app-tags>

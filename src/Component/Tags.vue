@@ -3,6 +3,7 @@
          <Tag   v-for="(tag,index) in tags" :key="tag"
          :tag="tag"
          :index="index"
+         tagColor="color"
          @removeTagEvent="removeOneTag ($event)" />
 
     <input 
@@ -27,6 +28,12 @@ export default {
   props:{
       value:{
           required:false,
+      },
+      color:{
+        type:String,
+        required:false,
+        default:"primary"
+
       }
   },
   created(){
