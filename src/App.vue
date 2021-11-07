@@ -6,7 +6,7 @@
 <app-tags v-model="tags2"  ></app-tags>
 {{tags2}}
 <hr>
-<app-tags v-model="tags"  ></app-tags>
+<app-tags v-model="tags3"  ></app-tags>
 {{tags}}
 
  </div>
@@ -20,7 +20,8 @@ export default {
  data(){
    return{
      tags:"Vue,jquery,Ali",
-    tags2:"Vue,jquery,Ali"
+    tags2:"Vue,jquery,Ali",
+    tags3:"Vue,jquery,Ali"
    }
  }
 }
